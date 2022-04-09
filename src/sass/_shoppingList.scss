@@ -1,0 +1,50 @@
+.shopping {
+    padding: 1rem 0;
+    position: absolute;
+    height: auto;
+    // right: 0;
+    right: -2.5rem;
+    z-index: 10;
+    width: 40rem;
+    background-color: #fff;
+    box-shadow: 0 0.8rem 5rem 2rem rgba($color-grey-dark-1, 0.1);
+    transform: translateX(100%);
+    overflow: auto;
+  
+    transition: all 0.5s 0.2s;
+  
+    &:hover,
+    .nav__btn--shopping-cart:hover + & {
+      transform: translateX(0%);
+    }
+    
+    & .recipe__ingredient {
+        font-size: 1.5rem;
+        &-list {
+            grid-template-columns: 1fr;
+            gap: 0;
+        }
+    }
+
+    & .heading--2 {
+        position: relative;
+        margin: 5rem 9rem 2rem;
+
+        & svg {
+            position: absolute;
+            left: 0;
+            top: 0.3rem;
+            height: 2.4rem;
+            width: 2.4rem;
+            fill: $color-primary;
+            margin-right: 0.7rem;
+            transform: translateY(-1px);
+        }
+    }
+
+    & .recipe__description,
+    .recipe__unit,
+    .recipe__quantity {
+        color: $color-grey-dark-1;
+    }
+}
